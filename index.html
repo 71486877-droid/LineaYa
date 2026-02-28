@@ -18,7 +18,7 @@
             color: #1e293b;
         }
 
-        /* HEADER MEJORADO */
+        /* HEADER CON LOGO */
         header {
             display: flex;
             justify-content: space-between;
@@ -33,7 +33,18 @@
             border-bottom: 1px solid rgba(37,99,235,0.1);
         }
 
-        header h2 {
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-container img {
+            height: 40px;
+            width: auto;
+        }
+
+        .logo-container h2 {
             font-size: 24px;
             color: #2563eb;
         }
@@ -66,7 +77,7 @@
             width: 100%;
         }
 
-        /* BOTÓN PRINCIPAL MEJORADO */
+        /* BOTÓN PRINCIPAL */
         .btn-primary {
             background: linear-gradient(135deg, #2563eb, #3b82f6);
             color: white;
@@ -86,7 +97,7 @@
             background: linear-gradient(135deg, #1d4ed8, #2563eb);
         }
 
-        /* HERO SECTION */
+        /* HERO SECTION CON IMAGEN NUEVA */
         .hero {
             display: flex;
             align-items: center;
@@ -136,7 +147,7 @@
             border-bottom-color: #2563eb;
         }
 
-        /* CÍRCULO DE LA IMAGEN MEJORADO */
+        /* CÍRCULO CON IMAGEN 4517 */
         .mockup {
             width: 450px;
             height: 450px;
@@ -231,7 +242,7 @@
             line-height: 1.7;
         }
 
-        /* ESTADÍSTICAS CON ICONOS */
+        /* ESTADÍSTICAS */
         .stats {
             display: flex;
             justify-content: center;
@@ -271,7 +282,7 @@
             font-weight: 500;
         }
 
-        /* TESTIMONIOS MEJORADOS */
+        /* TESTIMONIOS */
         .testimonials {
             display: flex;
             justify-content: center;
@@ -333,7 +344,7 @@
             font-size: 16px;
         }
 
-        /* CTA MEJORADO */
+        /* CTA */
         .cta {
             background: linear-gradient(135deg, #2563eb, #3b82f6);
             color: white;
@@ -389,7 +400,7 @@
             box-shadow: 0 15px 40px rgba(0,0,0,0.3);
         }
 
-        /* FOOTER MEJORADO */
+        /* FOOTER */
         footer {
             background: #0f172a;
             color: white;
@@ -426,7 +437,7 @@
             line-height: 1.7;
         }
 
-        /* RESPONSIVE MEJORADO */
+        /* RESPONSIVE */
         @media (max-width: 1000px) {
             .hero {
                 flex-direction: column;
@@ -457,6 +468,10 @@
                 flex-direction: column;
                 gap: 20px;
                 padding: 20px 5%;
+            }
+
+            .logo-container {
+                justify-content: center;
             }
 
             header nav {
@@ -502,7 +517,10 @@
 <body>
 
 <header>
-    <h2>📱 LíneaYa</h2>
+    <div class="logo-container">
+        <img src="images/9b13ab93-7f74-4698-906a-b131adac3580.png" alt="Logo LíneaYa">
+        <h2>LíneaYa</h2>
+    </div>
     <nav>
         <a href="#">Inicio</a>
         <a href="#">Funciones</a>
@@ -522,7 +540,7 @@
         </div>
     </div>
     <div class="mockup">
-        <img src="images/persona-lineaya.jpg" alt="Usuario usando LineaYa">
+        <img src="images/4517.jpg" alt="Usuario usando LineaYa">
     </div>
 </section>
 
