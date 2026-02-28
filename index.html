@@ -18,50 +18,55 @@
             color: #1e293b;
         }
 
-        /* HEADER CON LOGO */
+        /* HEADER PROFESIONAL - SOLO LOGO */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 8%;
-            background: rgba(255,255,255,0.9);
+            padding: 15px 8%;
+            background: rgba(255,255,255,0.95);
             backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.03);
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid rgba(37,99,235,0.1);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 10px;
         }
 
         .logo-container img {
-            height: 40px;
+            height: 45px;
             width: auto;
+            transition: transform 0.3s;
         }
 
-        .logo-container h2 {
-            font-size: 24px;
-            color: #2563eb;
+        .logo-container img:hover {
+            transform: scale(1.05);
+        }
+
+        header nav {
+            display: flex;
+            gap: 30px;
         }
 
         header nav a {
-            margin: 0 15px;
             text-decoration: none;
             color: #334155;
             font-weight: 500;
+            font-size: 16px;
             transition: all 0.3s;
             position: relative;
+            padding: 5px 0;
         }
 
         header nav a::after {
             content: '';
             position: absolute;
-            bottom: -5px;
+            bottom: 0;
             left: 0;
             width: 0;
             height: 2px;
@@ -81,10 +86,11 @@
         .btn-primary {
             background: linear-gradient(135deg, #2563eb, #3b82f6);
             color: white;
-            padding: 12px 24px;
-            border-radius: 30px;
+            padding: 12px 28px;
+            border-radius: 40px;
             text-decoration: none;
             font-weight: 600;
+            font-size: 15px;
             transition: all 0.3s;
             display: inline-block;
             box-shadow: 0 4px 15px rgba(37,99,235,0.2);
@@ -97,7 +103,7 @@
             background: linear-gradient(135deg, #1d4ed8, #2563eb);
         }
 
-        /* HERO SECTION CON IMAGEN NUEVA */
+        /* HERO SECTION */
         .hero {
             display: flex;
             align-items: center;
@@ -116,9 +122,7 @@
             font-size: 52px;
             margin-bottom: 20px;
             line-height: 1.2;
-            background: linear-gradient(135deg, #0f172a, #334155);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #0f172a;
         }
 
         .hero p {
@@ -147,7 +151,7 @@
             border-bottom-color: #2563eb;
         }
 
-        /* CÍRCULO CON IMAGEN 4517 */
+        /* CÍRCULO CON IMAGEN */
         .mockup {
             width: 450px;
             height: 450px;
@@ -155,7 +159,7 @@
             overflow: hidden;
             box-shadow: 
                 0 30px 60px -15px rgba(37,99,235,0.3),
-                inset 0 -10px 20px rgba(0,0,0,0.1);
+                inset 0 -10px 20px rgba(0,0,0,0.05);
             border: 8px solid white;
             background: linear-gradient(135deg, #e0f2fe, #dbeafe);
             display: flex;
@@ -180,7 +184,7 @@
         }
 
         .mockup:hover::before {
-            opacity: 0.3;
+            opacity: 0.2;
         }
 
         .mockup:hover {
@@ -205,38 +209,24 @@
             padding: 100px 8%;
             text-align: center;
             background: #ffffff;
-            position: relative;
         }
 
         .section:nth-child(even) {
-            background: #fafbfc;
+            background: #f8fafc;
         }
 
         .section h2 {
             font-size: 38px;
             margin-bottom: 20px;
-            max-width: 800px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: linear-gradient(135deg, #2563eb, #7c3aed);
-            border-radius: 2px;
+            color: #0f172a;
         }
 
         .section p {
             max-width: 700px;
-            margin: 30px auto 50px;
+            margin: 0 auto 40px;
             color: #475569;
             font-size: 18px;
             line-height: 1.7;
@@ -254,18 +244,6 @@
         .stat {
             text-align: center;
             min-width: 180px;
-            padding: 30px 20px;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            transition: all 0.3s;
-            border: 1px solid rgba(0,0,0,0.02);
-        }
-
-        .stat:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(37,99,235,0.1);
-            border-color: #2563eb;
         }
 
         .stat h3 {
@@ -300,30 +278,18 @@
             text-align: left;
             transition: all 0.3s;
             border: 1px solid rgba(0,0,0,0.02);
-            position: relative;
-        }
-
-        .card::before {
-            content: '"';
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 80px;
-            color: #2563eb;
-            opacity: 0.1;
-            font-family: serif;
         }
 
         .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(37,99,235,0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(37,99,235,0.08);
             border-color: #2563eb;
         }
 
         .card h4 {
             margin-bottom: 15px;
             color: #0f172a;
-            font-size: 20px;
+            font-size: 18px;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -346,58 +312,36 @@
 
         /* CTA */
         .cta {
-            background: linear-gradient(135deg, #2563eb, #3b82f6);
+            background: linear-gradient(135deg, #1e293b, #0f172a);
             color: white;
             padding: 100px 8%;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: rotate 20s linear infinite;
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
         }
 
         .cta h2 {
             font-size: 42px;
             margin-bottom: 20px;
             color: white;
-            position: relative;
         }
 
         .cta p {
             font-size: 20px;
             margin-bottom: 40px;
-            opacity: 0.95;
-            position: relative;
+            opacity: 0.9;
+            color: white;
         }
 
         .cta .btn-primary {
             background: white;
-            color: #2563eb;
+            color: #0f172a;
             font-size: 18px;
             padding: 16px 48px;
-            border-radius: 40px;
-            position: relative;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         .cta .btn-primary:hover {
             background: #f8fafc;
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
         }
 
         /* FOOTER */
@@ -406,35 +350,25 @@
             color: white;
             text-align: center;
             padding: 60px 8%;
-            position: relative;
+            border-top: 1px solid rgba(255,255,255,0.05);
         }
 
-        footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #2563eb, #7c3aed, transparent);
+        footer .logo-container {
+            justify-content: center;
+            margin-bottom: 20px;
         }
 
-        footer h3 {
-            margin-bottom: 15px;
-            font-size: 28px;
-            background: linear-gradient(135deg, #60a5fa, #c084fc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: inline-block;
+        footer .logo-container img {
+            height: 40px;
+            opacity: 0.9;
         }
 
         footer p {
-            margin-top: 15px;
             color: #94a3b8;
             max-width: 400px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 10px auto;
             line-height: 1.7;
+            font-size: 15px;
         }
 
         /* RESPONSIVE */
@@ -457,10 +391,6 @@
                 width: 380px;
                 height: 380px;
             }
-
-            .stats {
-                gap: 30px;
-            }
         }
 
         @media (max-width: 600px) {
@@ -470,19 +400,10 @@
                 padding: 20px 5%;
             }
 
-            .logo-container {
-                justify-content: center;
-            }
-
             header nav {
-                display: flex;
+                gap: 20px;
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 20px;
-            }
-
-            header nav a {
-                margin: 0;
             }
 
             .hero h1 {
@@ -500,12 +421,7 @@
 
             .stats {
                 flex-direction: column;
-                align-items: center;
-            }
-
-            .stat {
-                width: 100%;
-                max-width: 280px;
+                gap: 40px;
             }
 
             .cta h2 {
@@ -518,8 +434,7 @@
 
 <header>
     <div class="logo-container">
-        <img src="images/9b13ab93-7f74-4698-906a-b131adac3580.png" alt="Logo LíneaYa">
-        <h2>LíneaYa</h2>
+        <img src="images/9b13ab93-7f74-4698-906a-b131adac3580.png" alt="LíneaYa">
     </div>
     <nav>
         <a href="#">Inicio</a>
@@ -527,7 +442,7 @@
         <a href="#">Beneficios</a>
         <a href="#">Soporte</a>
     </nav>
-    <a href="#" class="btn-primary">📲 Descargar app</a>
+    <a href="#" class="btn-primary">Descargar app</a>
 </header>
 
 <section class="hero">
@@ -535,52 +450,54 @@
         <h1>Controla tu línea móvil en segundos</h1>
         <p>Revisa tu consumo, paga tu recibo, recarga saldo y gestiona tu plan desde un solo lugar. Rápido, seguro y sin complicaciones.</p>
         <div class="hero-buttons">
-            <a href="#" class="btn-primary">📱 Descargar ahora</a>
-            <a href="#">✨ Conocer funciones</a>
+            <a href="#" class="btn-primary">Descargar ahora</a>
+            <a href="#">Conocer funciones</a>
         </div>
     </div>
     <div class="mockup">
-        <img src="images/4517.jpg" alt="Usuario usando LineaYa">
+        <img src="images/4517.jpg" alt="Usuario usando LíneaYa">
     </div>
 </section>
 
 <section class="section">
-    <h2>Todo lo que necesitas para gestionar tu línea, en una sola app</h2>
-    <p>LíneaYa simplifica la administración de tu servicio móvil. Olvídate de llamadas largas o filas en tiendas. Desde tu cuenta podrás realizar operaciones con tus datos personales.</p>
+    <h2>Todo lo que necesitas en una sola app</h2>
+    <p>LíneaYa simplifica la administración de tu servicio móvil. Olvídate de llamadas largas o filas en tiendas.</p>
     <div class="stats">
-        <div class="stat"><h3>+50 mil</h3><p>Usuarios activos</p></div>
-        <div class="stat"><h3>4.8★</h3><p>Calificación promedio</p></div>
-        <div class="stat"><h3>+2M</h3><p>Recargas realizadas</p></div>
-        <div class="stat"><h3>24/7</h3><p>Soporte disponible</p></div>
+        <div class="stat"><h3>+50k</h3><p>Usuarios activos</p></div>
+        <div class="stat"><h3>4.8★</h3><p>Calificación</p></div>
+        <div class="stat"><h3>+2M</h3><p>Recargas</p></div>
+        <div class="stat"><h3>24/7</h3><p>Soporte</p></div>
     </div>
 </section>
 
 <section class="section">
-    <h2>Testimonios</h2>
+    <h2>Lo que dicen nuestros usuarios</h2>
     <div class="testimonials">
         <div class="card">
             <h4>Carlos Paredes</h4>
-            <p>"Ahora puedo pagar mi recibo en menos de un minuto. La app es súper fácil de usar."</p>
+            <p>"Ahora pago mi recibo en menos de un minuto. La app es súper fácil de usar."</p>
         </div>
         <div class="card">
             <h4>Natalia López</h4>
-            <p>"Me gusta que puedo ver mi consumo en tiempo real. Todo está claro y ordenado."</p>
+            <p>"Veo mi consumo en tiempo real. Todo está claro y ordenado."</p>
         </div>
         <div class="card">
             <h4>Luis Ramírez</h4>
-            <p>"Antes tenía que ir a una tienda, ahora hago todo desde mi celular."</p>
+            <p>"Antes iba a la tienda, ahora hago todo desde mi celular."</p>
         </div>
     </div>
 </section>
 
 <section class="cta">
-    <h2>Descarga LíneaYa hoy mismo</h2>
-    <p>Administra tu línea desde cualquier lugar. Es gratis.</p>
-    <a href="#" class="btn-primary">📲 Descargar ahora</a>
+    <h2>Descarga LíneaYa</h2>
+    <p>Gratis en App Store y Google Play</p>
+    <a href="#" class="btn-primary">Descargar ahora</a>
 </section>
 
 <footer>
-    <h3>LíneaYa</h3>
+    <div class="logo-container">
+        <img src="images/9b13ab93-7f74-4698-906a-b131adac3580.png" alt="LíneaYa">
+    </div>
     <p>Gestiona tu línea de forma rápida, segura y sin complicaciones.</p>
     <p>© 2026 LíneaYa. Todos los derechos reservados.</p>
 </footer>
